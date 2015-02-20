@@ -86,9 +86,9 @@ John implementa la suma
 
 */
 int main(int argc, char *argv[]){
-	/* Mary implementa la multiplicación */
+<<<<<<< HEAD
+	/* Mary implementa la multiplicación y la división*/
   /* John implementa la suma */
-
    if(argc!=4){
       printf("USO CORRECTO: calc [operando 1] [+ | - | * | /] [operando 2]\n");
       exit(1); //Sale del programa si el usuario no introduce el número correcto de argumentos
@@ -102,7 +102,9 @@ int main(int argc, char *argv[]){
            break;
        case '*':
            resultado=a*b;
-    }
+       case '/':
+           resultado=a/b;           
+           }
    printf("%d %c %d = %d\n", a, argv[2][0], b, resultado); //Imprime el resultado
    return 0;
 
