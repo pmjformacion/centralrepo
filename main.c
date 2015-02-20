@@ -1,4 +1,5 @@
-/* Módulo de arranque de la aplicación */
+<<<<<<< HEAD
+/* Módulo de arranque de la aplicación 
 int main(int argc, char *argv[]){
 
 
@@ -59,18 +60,35 @@ argv[2]="b"
 argv[3]="c"
 
 Ya hecho esto, podemos acceder a los valores de los argumentos con el arreglo argv[]. Incluso podemos hacer otras cosas útiles como comprobar si el usuario insertó el número correcto de parámetros comprobando argc; en caso de estar mal, podemos avisar al usuario que debe introducir bien los argumentos del programa.
-
+=======
+/* ******************************************************
+ * Para ejemplificar mejor lo anterior, hagamos una 
+ * calculadora que realice las cuatro operaciones 
+ * aritméticas básicas con enteros, a la cual llamaremos 
+ * por línea de comandos con la forma: “calc [operando 1]
+ * [operador] [operando 2]”
+ * ******************************************************* */
+/*
+>>>>>>> Mary implements the Multiplication in calc
+pero he hecho un GIT PULL --REBASE ORIGIN MASTER
+así que ahora estoy combinando a mano el fichero main.c que 
+había en el repositorio 'centralrepo' y el local de mary
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
+<<<<<<< HEAD
+
 
 /*
 Para ejemplificar mejor lo anterior, hagamos una calculadora que realice las cuatro operaciones aritméticas básicas con enteros, a la cual llamaremos por línea de comandos con la forma: “calc [operando 1] [operador] [operando 2]”
 John implementa la suma
 
 */
-
 int main(int argc, char *argv[]){
+	/* Mary implementa la multiplicación */
+  /* John implementa la suma */
+
    if(argc!=4){
       printf("USO CORRECTO: calc [operando 1] [+ | - | * | /] [operando 2]\n");
       exit(1); //Sale del programa si el usuario no introduce el número correcto de argumentos
@@ -82,8 +100,10 @@ int main(int argc, char *argv[]){
        case '+':
            resultado=a+b;
            break;
-           }
+       case '*':
+           resultado=a*b;
+    }
    printf("%d %c %d = %d\n", a, argv[2][0], b, resultado); //Imprime el resultado
    return 0;
-   }
+
 }
