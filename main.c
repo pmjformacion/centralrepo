@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* Módulo de arranque de la aplicación 
 int main(int argc, char *argv[]){
 
@@ -77,18 +77,10 @@ había en el repositorio 'centralrepo' y el local de mary
 
 #include <stdio.h>
 #include <stdlib.h>
-<<<<<<< HEAD
 
-
-/*
-Para ejemplificar mejor lo anterior, hagamos una calculadora que realice las cuatro operaciones aritméticas básicas con enteros, a la cual llamaremos por línea de comandos con la forma: “calc [operando 1] [operador] [operando 2]”
-John implementa la suma
-
-*/
 int main(int argc, char *argv[]){
-<<<<<<< HEAD
 	/* Mary implementa la multiplicación y la división*/
-  /* John implementa la suma */
+  /* John implementa la suma y la resta*/
    if(argc!=4){
       printf("USO CORRECTO: calc [operando 1] [+ | - | * | /] [operando 2]\n");
       exit(1); //Sale del programa si el usuario no introduce el número correcto de argumentos
@@ -100,11 +92,13 @@ int main(int argc, char *argv[]){
        case '+':
            resultado=a+b;
            break;
+       case '-':
+           resultado=a-b;
+           break;           
        case '*':
            resultado=a*b;
        case '/':
            resultado=a/b;           
-           }
    printf("%d %c %d = %d\n", a, argv[2][0], b, resultado); //Imprime el resultado
    return 0;
 
